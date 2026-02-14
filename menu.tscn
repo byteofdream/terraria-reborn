@@ -1,0 +1,168 @@
+[gd_scene load_steps=10 format=3 uid="uid://bgjnjwfdi52mb"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_4j68y"]
+[ext_resource type="FontFile" uid="uid://d4gpx0e6c18gx" path="res://brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="2_gm6fb"]
+[ext_resource type="PackedScene" uid="uid://dm83wsp2iu76j" path="res://bg.tscn" id="3_4dotl"]
+[ext_resource type="AudioStream" uid="uid://q41w0faeji1y" path="res://Tracks/mp3/Sci-Fi 1.mp3" id="5_sqa57"]
+[ext_resource type="PackedScene" uid="uid://cdog3jaq6r466" path="res://frame.tscn" id="6_xk710"]
+[ext_resource type="Texture2D" uid="uid://df3p8wq3an5r3" path="res://01.png" id="7_fvmf2"]
+[ext_resource type="Texture2D" uid="uid://dsns5w6nvwadq" path="res://912b92ae7dbedd0344a6580a7b90efc6.png" id="8_3an3j"]
+[ext_resource type="Texture2D" uid="uid://d37e0yfw2j0i1" path="res://terraria-logo.png" id="9_56kat"]
+[ext_resource type="PackedScene" uid="uid://dtwp86ub4s8yu" path="res://coin.tscn" id="10_qxrp4"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_4j68y")
+
+[node name="Button3" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 787.0
+offset_top = 707.0
+offset_right = 1136.0
+offset_bottom = 764.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_gm6fb")
+theme_override_font_sizes/font_size = 25
+text = "Update history"
+
+[node name="Button4" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 787.0
+offset_top = 839.0
+offset_right = 1136.0
+offset_bottom = 896.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_gm6fb")
+theme_override_font_sizes/font_size = 35
+text = "Settings"
+
+[node name="Button5" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 787.0
+offset_top = 895.0
+offset_right = 1136.0
+offset_bottom = 952.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_gm6fb")
+theme_override_font_sizes/font_size = 35
+text = "Quit"
+
+[node name="Button6" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 1671.0
+offset_right = 1923.0
+offset_bottom = 114.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_gm6fb")
+theme_override_font_sizes/font_size = 25
+text = "Our page on
+Itch.io"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 787.0
+offset_top = 627.0
+offset_right = 1136.0
+offset_bottom = 707.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_gm6fb")
+theme_override_font_sizes/font_size = 25
+text = "Play Singleplayer"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sqa57")
+autoplay = true
+
+[node name="BG2" parent="." instance=ExtResource("3_4dotl")]
+
+[node name="Frame" parent="." instance=ExtResource("6_xk710")]
+position = Vector2(136, 125)
+scale = Vector2(3.48, 3.48)
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 199.0
+offset_top = 104.0
+offset_right = 399.0
+offset_bottom = 142.0
+text = "Player"
+
+[node name="01" type="Sprite2D" parent="."]
+position = Vector2(298, 68)
+scale = Vector2(2.05296, 2.05296)
+texture = ExtResource("7_fvmf2")
+
+[node name="TextLabelSys" type="Label" parent="."]
+offset_left = 243.0
+offset_top = 67.0
+offset_right = 355.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gm6fb")
+text = "Nice day!"
+
+[node name="912b92Ae7Dbedd0344a6580a7b90Efc6" type="Sprite2D" parent="."]
+position = Vector2(136, 125)
+scale = Vector2(0.162109, 0.162109)
+texture = ExtResource("8_3an3j")
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+offset_left = 199.0
+offset_top = 146.0
+offset_right = 240.0
+offset_bottom = 184.0
+text = "   1"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 246.0
+offset_top = 165.0
+offset_right = 391.0
+offset_bottom = 175.0
+show_percentage = false
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 243.0
+offset_top = 148.0
+offset_right = 392.0
+offset_bottom = 188.0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 287.0
+offset_top = 143.0
+offset_right = 429.0
+offset_bottom = 166.0
+text = "0 / 350 XP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Terraria-logo" type="Sprite2D" parent="."]
+position = Vector2(967, 322)
+scale = Vector2(0.409722, 0.409722)
+texture = ExtResource("9_56kat")
+
+[node name="Coin" parent="." instance=ExtResource("10_qxrp4")]
+position = Vector2(1297, 446)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 787.0
+offset_top = 764.0
+offset_right = 1137.0
+offset_bottom = 839.0
+theme_override_fonts/font = ExtResource("2_gm6fb")
+theme_override_font_sizes/font_size = 35
+text = "Workshop"
+
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
